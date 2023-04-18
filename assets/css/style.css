@@ -1,0 +1,102 @@
+/* Obtenido del apoyo al desafio */
+
+body {
+  margin: 0;
+}
+
+.beach {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.beach__sky {
+  align-items: center;
+  background-color: #61C1E8;
+  display: inherit;
+  flex-direction: column;
+  flex-grow: 4;
+  justify-content: flex-start;
+  padding: 20px 150px 0;
+}
+
+.beach__sun,
+.beach__content {
+    -webkit-animation: showContent 2s;
+    -moz-animation: showContent 2s;
+    -o-animation: showContent 2s;
+    animation: showContent 2s;
+    width: 100%;
+    animation: spin 2s infinite;
+}
+
+.beach__content {
+  color: #FFF;
+  font-family: monospace;
+}
+
+.beach__title {
+  font-size: 2rem;
+}
+
+.beach__text {
+  font-size: 1rem;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 500%
+    }
+    to {
+      margin-left: 0%;
+      width: 10%;
+    }
+  }
+
+.beach__sand {
+  align-items: flex-end;
+  background-color: #F1EDD9;
+  display: inherit;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 0 300px;
+  position: relative;
+}
+
+.beach__sun-umbrella {
+  animation: moveToRight 1s;
+  left: 100px;
+  position: absolute;
+  top: 20px;
+}
+
+.beach_palm-tree {
+  animation: showContent 2s;
+  left: 55%;
+  position: absolute;
+  top: -100px;
+  z-index: 8;
+}
+
+.beach__people {
+  display: inline;
+}
+
+.beach__ball {
+  animation: moveToLeft 1s;
+  bottom: 102px;
+  position: absolute;
+  right: 180px;
+  animation-name: mover;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
